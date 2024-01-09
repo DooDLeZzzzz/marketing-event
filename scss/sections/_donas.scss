@@ -1,0 +1,108 @@
+.donas {
+  padding-bottom: 150px;
+  position: relative;
+  &__container {
+    background-color: var(--color-secondary);
+    padding: 38px 0 147px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px 13px;
+    margin: 0 -15px;
+
+    @media (min-width: $bp-tablet-ls) {
+      height: 850px;
+      justify-content: space-between;
+      align-items: stretch;
+      border-radius: 45px;
+      margin: 0 0;
+      padding: 38px 11px 147px 28px;
+    }
+  }
+  &__list-top {
+    display: flex;
+    gap: 16px 13px;
+
+    flex-direction: column;
+
+    @media (min-width: $bp-tablet-ls) {
+      flex-direction: row;
+      height: 350px;
+    }
+  }
+
+  &__list-bottom {
+    display: flex;
+    gap: 16px 50px;
+    justify-content: space-around;
+    flex-direction: column;
+    @media (min-width: $bp-tablet-ls) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    background-color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 45px;
+    padding: 44px 15px 10px;
+    max-width: 430px;
+    border: 1px solid var(--color-text);
+    box-shadow: 0 5px 0 var(--color-text);
+
+    &--1 {
+      @media (min-width: $bp-tablet-ls) {
+        align-self: flex-start;
+      }
+    }
+    &--2 {
+      @media (min-width: $bp-tablet-ls) {
+        align-self: flex-end;
+      }
+    }
+    &--3 {
+      @media (min-width: $bp-tablet-ls) {
+        align-self: center;
+      }
+    }
+  }
+  &__text {
+    font-size: 18px;
+    background-color: var(--color-secondary);
+    border-radius: 15px;
+    padding: 5px;
+
+    @media (min-width: $bp-tablet-ls) {
+      font-size: 24px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    background-color: var(--color-brand);
+    display: inline-block;
+    padding: 20px 70px;
+    border-radius: 75px;
+    position: absolute;
+    left: 50%;
+    bottom: 105px;
+    transform: translatex(-50%);
+
+    @media (max-width: $bp-tablet) {
+      // margin: 0 auto;
+      // left: 0;
+      // transform: translatex(0);
+    }
+
+    @media (min-width: $bp-tablet-ls) {
+      font-size: 44px;
+    }
+  }
+}

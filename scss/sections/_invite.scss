@@ -1,0 +1,92 @@
+.invite {
+  padding: 0 0 200px;
+  text-align: center;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__banner {
+    background-color: var(--color-accent);
+    margin-bottom: 42px;
+  }
+
+  &__title {
+    padding: 20px 35px;
+    color: var(--color-light);
+    font-size: 34px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    word-break: break-word;
+    font-weight: 900;
+
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__title-small {
+    padding: 20px 35px;
+    color: var(--color-light);
+    font-size: 34px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    word-break: break-word;
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: var(--color-accent);
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 20px 35px;
+    background-color: var(--color-secondary);
+    border-radius: 14px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    border: 1px solid var(--color-accent);
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-brand);
+      border: 1px solid transparent;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      background-size: cover;
+      height: 280px;
+      width: 500px;
+      top: -40px;
+      left: -180px;
+      background-image: url('/images/hands.png');
+      animation: bigger 1.5s infinite;
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('/images/hands@2x.png');
+      }
+
+      @media (max-width: $bp-tablet) {
+        width: 400px;
+        top: -20px;
+        left: -125px;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      @media (max-width: $bp-mobile) {
+        width: 320px;
+        height: 180px;
+        top: 10px;
+        left: -90px;
+        object-fit: cover;
+      }
+    }
+  }
+}

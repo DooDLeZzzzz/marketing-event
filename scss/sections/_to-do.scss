@@ -1,0 +1,222 @@
+.to-do {
+  padding: 50px 0;
+
+  &__container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+
+    @media (min-width: $bp-tablet) {
+      padding: 0 15px;
+    }
+  }
+
+  &__title {
+    color: var(--color-brand);
+    font-size: 24px;
+    line-height: 1.14;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 15px;
+
+    @media (min-width: $bp-mobile) {
+      font-size: 35px;
+    }
+
+    @media (min-width: $bp-tablet-ls) {
+      font-size: 54px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__box {
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      gap: 10px;
+      background-size: 100%;
+    }
+  }
+
+  &__block-left {
+    background-color: var(--color-secondary);
+    padding: 35px 40px;
+    flex-basis: calc((100% - 10px) / 2);
+    border-radius: 45px;
+    margin-bottom: 15px;
+
+    @media (max-width: $bp-tablet) {
+      border-radius: 0px;
+      padding: 35px 30px 75px;
+    }
+  }
+
+  &__block-right {
+    border-radius: 0;
+    @media (min-width: $bp-tablet) {
+      border-radius: 45px;
+      flex-basis: calc((100% - 10px) / 2);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__block-small {
+    background-color: var(--color-secondary);
+    padding: 26px 15px;
+    margin-bottom: 15px;
+    @media (min-width: $bp-tablet) {
+      border-radius: 45px;
+      background-color: var(--color-secondary);
+      padding: 35px 40px;
+      margin-bottom: 0;
+      height: 100%;
+    }
+  }
+
+  &__subtitle {
+    line-height: 1.14;
+    color: var(--color-brand);
+    align-self: baseline;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+    @media (min-width: $bp-mobile) {
+      font-size: 30px;
+    }
+
+    @media (min-width: $bp-tablet-ls) {
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text-dark {
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: left;
+    margin: 30px 0;
+    font-weight: 500;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 20px;
+    }
+  }
+
+  &__text-dark-left {
+    @media (min-width: $bp-desktop) {
+      position: relative;
+      margin: 76px 230px 115px 15px;
+      &::before {
+        content: "";
+        background-image: url("/images/houses.png");
+        background-size: cover;
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        left: 290px;
+        top: -80px;
+      }
+    }
+    @media (max-width: $bp-desktop) {
+      margin-top: 240px;
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url("/images/houses.png");
+        background-size: cover;
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        left: 100px;
+        top: -235px;
+      }
+    }
+
+    @media (max-width: $bp-tablet-ls) {
+      margin-top: 240px;
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url("/images/houses.png");
+        background-size: cover;
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        left: 30px;
+        top: -235px;
+      }
+    }
+  }
+
+  &__text-brand {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+    color: var(--color-brand);
+    background-color: var(--color-light);
+    padding: 10px 20px;
+    margin: 14px 0;
+    border-radius: 45px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+
+    &--cloud {
+      &::before {
+        content: "";
+        position: absolute;
+        background: url("/images/part.png");
+        width: 54px;
+        height: 72px;
+        bottom: -20px;
+        left: -25px;
+      }
+    }
+
+    &--uppercase {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    @media (min-width: $bp-tablet-ls) {
+      font-size: 20px;
+      padding: 10px 60px;
+    }
+  }
+
+  &__pictures {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  &__haha-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+    padding: 0;
+    background-image: url("../../images/button.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media (min-width: $bp-tablet-ls) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url("../../images/button@2x.png");
+    }
+  }
+}

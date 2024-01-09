@@ -1,0 +1,22 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: $bp-desktop) {
+    gap: 20px;
+  }
+
+  @media (max-width: $bp-tablet-ls) {
+    gap: 15px;
+  }
+
+  &__link {
+    fill: var(--color-brand);
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: var(--color-accent);
+    }
+  }
+}

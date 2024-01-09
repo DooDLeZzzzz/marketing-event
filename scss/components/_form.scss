@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: var(--color-secondary);
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin-bottom: 25px;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: var(--color-light);
+    border-radius: 45px;
+    padding: 25px 26px;
+    margin-bottom: 25px;
+    // width: 100%;
+    font-size: 16px;
+    line-height: 1.41;
+    box-shadow: 0 5px 0 var(--color-text);
+    border: none;
+
+    &::placeholder {
+      color: var(--color-brand);
+    }
+  }
+
+  &__button {
+    color: var(--color-secondary);
+    padding: 6px 30px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.9;
+    border-radius: 15px;
+    font-weight: 500;
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-secondary);
+    cursor: pointer;
+  }
+}

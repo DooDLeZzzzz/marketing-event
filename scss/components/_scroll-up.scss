@@ -1,0 +1,40 @@
+.scroll-up {
+  position: fixed;
+  fill: var(--color-secondary);
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 102, 255, 0.43);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 5;
+
+  @media (min-width: $bp-tablet) {
+    bottom: 50px;
+    right: 50px;
+    width: 90px;
+    height: 90px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    @media (hover: hover) {
+      .scroll-up:hover & {
+        animation-name: scroll-top;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+      }
+    }
+
+    @media (min-width: $bp-tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

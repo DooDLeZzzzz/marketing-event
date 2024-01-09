@@ -1,0 +1,252 @@
+.ticket {
+  padding: 0 0 30px;
+
+  @media (min-width: $bp-mobile) {
+    padding: 30px 0px;
+  }
+
+  @media (min-width: $bp-tablet) {
+    padding: 60px 0px;
+  }
+
+  &__container {
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__backdrop {
+    background-image: url('/images/ticket.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    height: 200px;
+    padding: 0 4px 0 10px;
+
+    @media (min-width: $bp-mobile) {
+      height: 285px;
+      padding: 0 8px 0 30px;
+      align-items: center;
+    }
+
+    @media (min-width: $bp-tablet) {
+      height: 350px;
+      padding: 45px 15px 0 40px;
+    }
+
+    @media (min-width: $bp-tablet-ls) {
+      height: 450px;
+      padding: 45px 40px 0 40px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      margin: 0 auto;
+      align-items: stretch;
+      padding: 45px 50px 0 40px;
+      height: 500px;
+    }
+  }
+
+  &__block-left {
+    display: flex;
+    width: 90%;
+
+    @media (min-width: $bp-desktop) {
+      padding-top: 70px;
+    }
+  }
+
+  &__list {
+    color: var(--color-text);
+    font-size: 24px;
+    line-height: 1.45;
+    font-weight: 500;
+  }
+
+  &__item {
+    .ticket__list--decorated & {
+      position: relative;
+      margin-left: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: var(--color-brand);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        top: 55%;
+        left: -17px;
+        transform: translatey(-50%);
+      }
+    }
+  }
+
+  &__block-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 35%;
+
+    @media (min-width: $bp-tablet) {
+      width: 32%;
+    }
+
+    @media (min-width: $bp-tablet-ls) {
+      width: 24%;
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: 23%;
+    }
+  }
+
+  &__price-block {
+    margin-top: 10px;
+
+    @media (min-width: $bp-desktop) {
+      margin-top: 20px;
+    }
+  }
+
+  &__price {
+    color: var(--color-accent);
+    font-size: 24px;
+    font-weight: 900;
+    @media (min-width: $bp-mobile) {
+      font-size: 35px;
+    }
+    @media (min-width: $bp-tablet) {
+      font-size: 40px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 54px;
+    }
+  }
+
+  &__mobile-title {
+    font-size: 22px;
+    color: var(--color-brand);
+
+    @media (min-width: $bp-mobile) {
+      font-size: 35px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin-left: 50px;
+    width: 55%;
+    padding-top: 13px;
+
+    @media (max-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__address-mobile {
+    margin-bottom: 20px;
+
+    @media (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: var(--color-brand);
+    text-transform: uppercase;
+    font-size: 34px;
+    line-height: 1.2;
+
+    @media (min-width: $bp-mobile) {
+      font-size: 44px;
+      font-weight: 900;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.4;
+
+    @media (min-width: $bp-mobile) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $bp-tablet) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      font-size: 24px;
+    }
+
+    &--accent {
+      color: var(--color-brand);
+      line-height: 1.5;
+    }
+
+    @media (max-width: $bp-desktop) {
+    }
+  }
+
+  &__list-title {
+    font-weight: 500;
+  }
+
+  &__address-text {
+    font-size: 20px;
+    color: var(--color-text);
+    margin-bottom: 35px;
+
+    @media (max-width: $bp-tablet) {
+    }
+
+    @media (max-width: $bp-tablet-ls) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $bp-tablet) {
+      font-size: 13px;
+    }
+
+    @media (max-width: $bp-mobile) {
+      font-size: 9px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.4;
+    background-color: var(--color-accent);
+    border-radius: 14px;
+    color: var(--color-secondary);
+    padding: 8px 12px;
+    margin: 0 auto;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-brand);
+    }
+
+    @media (min-width: $bp-mobile) {
+      padding: 8px 15px;
+      font-size: 20px;
+    }
+
+    @media (min-width: $bp-tablet) {
+      padding: 20px 40px;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.header {
+  background-color: var(--color-light);
+  padding: 25px 0;
+
+  @media (min-width: $bp-tablet-ls) {
+    padding: 60px 0;
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $bp-desktop) {
+      gap: 10px;
+    }
+
+    @media (max-width: $bp-tablet) {
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 9px;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+  }
+
+  &__logo-icon {
+    width: 100px;
+
+    @media (min-width: $bp-tablet) {
+      width: 130px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: auto;
+    }
+  }
+
+  &__socials {
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    font-size: 20px;
+    color: var(--color-text);
+
+    &-link {
+      color: var(--color-text);
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-brand);
+      }
+    }
+
+    @media (max-width: $bp-desktop) {
+      gap: 20px;
+      font-size: 18px;
+      background-color: transparent;
+    }
+
+    @media (max-width: $bp-tablet-ls) {
+      gap: 15px;
+      font-size: 15px;
+    }
+
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    padding: 20px 35px;
+    border: var(--color-accent) 1px solid;
+    border-radius: 14px;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    white-space: nowrap;
+    transition: color 0.3s, background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-accent);
+      background-color: var(--color-light);
+    }
+
+    @media (max-width: $bp-desktop) {
+      font-size: 17px;
+      padding: 15px 25px;
+    }
+
+    @media (max-width: $bp-tablet-ls) {
+      font-size: 15px;
+      padding: 10px 15px;
+    }
+    @media (max-width: $bp-tablet) {
+      font-size: 18px;
+      padding: 15px;
+    }
+
+    @media (max-width: $bp-mobile) {
+      padding: 15px 10px;
+      font-size: 16px;
+    }
+  }
+}

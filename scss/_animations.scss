@@ -1,0 +1,27 @@
+@keyframes scroll-top {
+  60% {
+    transform: translatey(-50px);
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  90% {
+    transform: translatey(0);
+  }
+}
+
+@keyframes bigger {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

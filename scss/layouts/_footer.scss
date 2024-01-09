@@ -1,0 +1,173 @@
+.footer {
+  &__background {
+    background-color: var(--color-brand);
+    padding: 41px 90px 41px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 72px 200px;
+
+    @media (max-width: $bp-tablet-ls) {
+      margin: 0 -15px;
+    }
+
+    @media (min-width: $bp-tablet-ls) {
+      border-radius: 45px 45px 0 0;
+
+      .footer--squared & {
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: $bp-desktop) {
+      gap: 72px 40px;
+      padding: 41px 40px 41px 40px;
+    }
+
+    @media (max-width: $bp-tablet-ls) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__block {
+    @media (max-width: $bp-tablet-ls) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    fill: var(--color-light);
+    margin-bottom: 52px;
+
+    @media (max-width: $bp-tablet-ls) {
+    }
+  }
+
+  &__address {
+    margin-bottom: 66px;
+    @media (max-width: $bp-tablet-ls) {
+    }
+  }
+
+  &__address-contact {
+    color: var(--color-secondary);
+    font-size: 34px;
+    line-height: 1.14;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__address-email {
+    text-transform: uppercase;
+    color: var(--color-light);
+    font-size: 20px;
+    line-height: 1.6;
+    text-decoration: underline;
+    font-weight: 300;
+
+    @media (min-width: $bp-desktop) {
+      font-size: 24px;
+    }
+  }
+
+  &__address-phone-number {
+    text-transform: uppercase;
+    color: var(--color-light);
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+
+    @media (min-width: $bp-desktop) {
+      font-size: 24px;
+    }
+  }
+
+  &__socials {
+    gap: 52px;
+    margin-bottom: 81px;
+    display: flex;
+    @media (max-width: $bp-tablet-ls) {
+      margin: 0 auto;
+    }
+  }
+
+  &__socials-link {
+    fill: var(--color-secondary);
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: var(--color-accent);
+    }
+  }
+
+  &__agreement {
+    font-size: 18px;
+    line-height: 1.9;
+    color: var(--color-light);
+
+    @media (max-width: $bp-tablet-ls) {
+      text-align: center;
+    }
+  }
+
+  &__form {
+    max-width: 370px;
+    @media (max-width: $bp-tablet-ls) {
+      text-align: center;
+    }
+  }
+
+  &__form-title {
+    @media (max-width: $bp-mobile) {
+      font-size: 18px;
+    }
+  }
+
+  &__form-list {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: url('/images/autobus.png');
+      width: 100%;
+      height: 100%;
+      bottom: 1px;
+      right: 360px;
+      top: 260px;
+
+      @media (max-width: $bp-desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__input {
+    font-weight: 300;
+    @media (min-width: $bp-mobile) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin-bottom: 61px;
+    cursor: pointer;
+  }
+
+  &__dev {
+    margin-left: auto;
+    color: var(--color-light);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  &__dev-link {
+    color: var(--color-light);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

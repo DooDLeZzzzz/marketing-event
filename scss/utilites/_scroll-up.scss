@@ -1,0 +1,29 @@
+.scroll-up {
+  position: fixed;
+  fill: var(--color-secondary);
+  bottom: 50px;
+  right: 50px;
+  opacity: 0.5;
+  border: none;
+  cursor: pointer;
+  width: 43px;
+  height: 18px;
+  background-color: transparent;
+  background-color: var(--color-brand);
+  width: 89px;
+  height: 89px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 10;
+
+  &__icon {
+    .scroll-up:hover & {
+      animation-name: scroll-top;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+    }
+  }
+}

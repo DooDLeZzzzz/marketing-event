@@ -1,0 +1,53 @@
+.output {
+  &__block {
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 25px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    margin: 0 -15px 40px auto;
+
+    @media (min-width: $bp-mobile) {
+      max-width: 450px;
+      object-fit: contain;
+    }
+
+    @media (min-width: $bp-tablet) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $bp-desktop) {
+      max-width: none;
+    }
+  }
+
+  &__description {
+    padding-top: 50px;
+    font-size: 24px;
+    line-height: 1.39;
+    color: var(--color-text);
+    margin-bottom: 36px;
+    font-weight: 500;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 20px;
+    }
+
+    &-accent {
+      font-size: 24px;
+      line-height: 1.39;
+      color: var(--color-brand);
+      font-weight: 900;
+    }
+
+    @media (max-width: $bp-tablet) {
+      font-size: 20px;
+    }
+  }
+}
